@@ -1,0 +1,23 @@
+.waveContainer {
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: #000000; /* Customize your color here */
+  margin-top: 3rem;
+}
+
+.waveLetter {
+  display: inline-block;
+  animation: wave 1.5s infinite ease-in-out;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
