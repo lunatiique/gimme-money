@@ -3,7 +3,7 @@ import styles from './css/BlockGrid.module.css'; // CSS module for styling
 
 // Example icons array, feel free to expand or replace with any other icons and labels
 const blocks = [
-  { icon: <img src="/img/sepolia_icon.png" alt="sepolia" />, text: 'Sepolia', bottomText: 'The application is deployed on Sepolia testnet.'},
+  { icon: <img src="/img/sepolia_icon.png" alt="sepolia" />, text: 'Sepolia', bottomText: 'The application is deployed on Sepolia testnet for test purposes.'},
   { icon: <img src="img/crowdfunding_icon.png" alt="crowdfunding" />, text: 'Crowdfunding', bottomText: 'Launch your campaign of crowdfunding on the blockchain.' },
   { icon: <img src="img/safety_icon.png" alt="safety" />, text: 'Safety', bottomText: 'Be ensured of the safety and the transparency of your campaign.' },
 ];
