@@ -17,7 +17,7 @@ git clone https://github.com/lunatiique/gimme-money
 ```
 2. Install the dependencies
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 3. Start the project
 ```bash
