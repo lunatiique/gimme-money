@@ -26,6 +26,7 @@ npm start
 4. Open your browser and go to http://localhost:3000
 5. You can now create a campaign and contribute to existing ones.
 6. To test the project, you can use the Metamask extension on your browser. You can find more information about Metamask [here](https://metamask.io/).
+7. Warning : if after starting the project, it runs in an infinite loop and does't start the website : delete the `.next` folder (cache issues).
 
 ## How to deploy the smart contract
 1. Go to the `ethereum` directory
