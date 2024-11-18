@@ -22,6 +22,7 @@ class CampaignNew extends Component {
         .createCampaign(this.state.minimumContribution)
         .send({
           from: accounts[0],
+          gas: "2000000",
         });
 
       Router.pushRoute("/");
