@@ -4,19 +4,19 @@ import factory from "../../ethereum/factory";
 import Layout from "../../components/Layout";
 import { Link } from "../../routes";
 
-class CampaignIndex extends Component {
+class CrowdfundingIndex extends Component {
   static async getInitialProps() {
-    const campaigns = await factory.methods.getDeployedCampaigns().call();
+    const crowdfundings = await factory.methods.getDeployedCrowdfundings().call();
 
-    return { campaigns };
+    return { crowdfundings };
   }
-  renderCampaigns() {
-    const items = this.props.campaigns.map((address) => {
+  renderCrowdfundings() {
+    const items = this.props.crowdfundings.map((address) => {
       return {
         header: address,
         description: (
-          <Link route={`/campaigns/${address}`}>
-            <a>View Campaign</a>
+          <Link route={`/crowdfundings/${address}`}>
+            <a>View Crowdfunding</a>
           </Link>
         ),
         fluid: true,
@@ -25,9 +25,9 @@ class CampaignIndex extends Component {
     if (items.length === 0) {
       return (
         <div>
-          <h3>No campaigns found</h3>
+          <h3>No crowdfundings found</h3>
           <p>
-            You can create a new campaign by clicking on the "Create Campaign"
+            You can create a new crowdfunding by clicking on the "Create Crowdfunding"
             button
           </p>
         </div>
@@ -39,22 +39,22 @@ class CampaignIndex extends Component {
     return (
       <Layout>
         <div>
-          <h3>Open Campaigns</h3>
-          <Link route="/campaigns/new">
+          <h3>Open Crowdfundings</h3>
+          <Link route="/crowdfundings/new">
             <a>
               <Button
                 floated="right"
-                content="Create Campaign"
+                content="Create Crowdfunding"
                 icon="add circle"
                 primary
               />
             </a>
           </Link>
-          {this.renderCampaigns()}
+          {this.renderCrowdfundings()}
         </div>
       </Layout>
     );
   }
 }
 
-export default CampaignIndex;
+export default CrowdfundingIndex;

@@ -1,23 +1,23 @@
 import React, { Component } from "react";
 import { Table, Button } from "semantic-ui-react";
 import web3 from "../ethereum/web3";
-import Campaign from "../ethereum/campaign";
+import Crowdfunding from "../ethereum/crowdfunding";
 
 class RequestRow extends Component {
   onApprove = async () => {
-    const campaign = Campaign(this.props.address);
+    const crowdfunding = Crowdfunding(this.props.address);
 
     const accounts = await web3.eth.getAccounts();
-    await campaign.methods.approveRequest(this.props.id).send({
+    await crowdfunding.methods.approveRequest(this.props.id).send({
       from: accounts[0],
     });
   };
 
   onFinalize = async () => {
-    const campaign = Campaign(this.props.address);
+    const crowdfunding = Crowdfunding(this.props.address);
 
     const accounts = await web3.eth.getAccounts();
-    await campaign.methods.finalizeRequest(this.props.id).send({
+    await crowdfunding.methods.finalizeRequest(this.props.id).send({
       from: accounts[0],
     });
   };

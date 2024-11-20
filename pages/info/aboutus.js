@@ -10,9 +10,9 @@ class AboutUs extends Component {
             <h3>About Us</h3>
             <p>
             Gimme Money is a crowdfunding platform that allows users to create
-            campaigns to raise money for their projects. The platform is built on
+            crowdfundings to raise money for their projects. The platform is built on
             the Ethereum blockchain and uses smart contracts to manage the
-            campaigns. Realized as a school project, this platform is a proof of concept.
+            crowdfundings. Realized as a school project, this platform is a proof of concept.
             
             It was created with the purpose of learning about blockchain technology and showing the advantages of using it in a crowdfunding platform.
             </p>

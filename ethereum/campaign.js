@@ -1,7 +1,7 @@
 import web3 from "./web3";
-import Campaign from "./build/Campaign.json";
+import Crowdfunding from "./build/Crowdfunding.json";
 
-const campaign = (address) => {
-  return new web3.eth.Contract(Campaign.abi, address);
+const crowdfunding = (address) => {
+  return new web3.eth.Contract(Crowdfunding.abi, address);
 };
-export default campaign;
+export default crowdfunding;

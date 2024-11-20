@@ -1,9 +1,9 @@
 import web3 from "./web3";
-import CampaignFactory from "./build/CampaignFactory.json";
+import CrowdfundingFactory from "./build/CrowdfundingFactory.json";
 
 const instance = new web3.eth.Contract(
-  CampaignFactory.abi,
-  "0x4b1d8755D5D6634bc1ee263291A074D21152c0bA"
+  CrowdfundingFactory.abi,
+  "0x1025DaCC63AdF201aBe5CdA6991b95C0a1bb00aB"
 );
 
 export default instance;

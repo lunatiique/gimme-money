@@ -10,8 +10,8 @@ const Header = () => {
         <a className="item" style={{padding : "10px"}}><Image src="/../public/img/logo-gimme-money.png" alt="Gimme Money Logo" width="70" height="70" /></a>
       </Link>
       <Menu.Menu position="right">
-        <Link route="/campaigns/list">
-          <a className="item">Campaigns</a>
+        <Link route="/crowdfundings/list">
+          <a className="item">Crowdfundings</a>
         </Link>
 
         <Link route="/info/aboutus">

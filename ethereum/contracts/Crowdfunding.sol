@@ -2,20 +2,20 @@
 
 pragma solidity ^0.8.9;
 
-contract CampaignFactory {
-    address payable[] public deployedCampaigns;
+contract CrowdfundingFactory {
+    address payable[] public deployedCrowdfundings;
 
-    function createCampaign(uint minimum) public {
-        address newCampaign = address(new Campaign(minimum, msg.sender));
-        deployedCampaigns.push(payable(newCampaign));
+    function createCrowdfunding(uint minimum) public {
+        address newCrowdfunding = address(new Crowdfunding(minimum, msg.sender));
+        deployedCrowdfundings.push(payable(newCrowdfunding));
     }
 
-    function getDeployedCampaigns() public view returns (address payable[] memory) {
-        return deployedCampaigns;
+    function getDeployedCrowdfundings() public view returns (address payable[] memory) {
+        return deployedCrowdfundings;
     }
 }
 
-contract Campaign {
+contract Crowdfunding {
     struct Request {
         string description;
         uint value;

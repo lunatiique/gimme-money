@@ -5,7 +5,7 @@ import factory from "../../ethereum/factory";
 import web3 from "../../ethereum/web3";
 import { Router } from "../../routes";
 
-class CampaignNew extends Component {
+class CrowdfundingNew extends Component {
   state = {
     minimumContribution: "",
     errorMessage: "",
@@ -19,7 +19,7 @@ class CampaignNew extends Component {
     try {
       const accounts = await web3.eth.getAccounts();
       await factory.methods
-        .createCampaign(this.state.minimumContribution)
+        .createCrowdfunding(this.state.minimumContribution)
         .send({
           from: accounts[0],
           gas: "2000000",
@@ -35,7 +35,7 @@ class CampaignNew extends Component {
   render() {
     return (
       <Layout>
-        <h3>Create Campaign</h3>
+        <h3>Create Crowdfunding</h3>
         <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
           <Form.Field>
             <label>Minimum Contribution</label>
@@ -58,4 +58,4 @@ class CampaignNew extends Component {
   }
 }
 
-export default CampaignNew;
+export default CrowdfundingNew;

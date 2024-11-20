@@ -1,6 +1,6 @@
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 const { Web3 } = require("web3");
-const compiledFactory = require("./build/CampaignFactory.json");
+const compiledFactory = require("./build/CrowdfundingFactory.json");
 
 const provider = new HDWalletProvider(
   "decrease banana sure target civil label advance snake club imitate position neck",
