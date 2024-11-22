@@ -5,8 +5,8 @@ pragma solidity ^0.8.9;
 contract CrowdfundingFactory {
     address payable[] public deployedCrowdfundings;
 
-    function createCrowdfunding(uint minimum) public {
-        address newCrowdfunding = address(new Crowdfunding(minimum, msg.sender));
+    function createCrowdfunding(uint minimum, string memory name) public {
+        address newCrowdfunding = address(new Crowdfunding(minimum, msg.sender, name));
         deployedCrowdfundings.push(payable(newCrowdfunding));
     }
 
@@ -28,6 +28,7 @@ contract Crowdfunding {
     Request[] public requests;
     address public manager;
     uint public minimumContribution;
+    string public name;
     mapping(address => bool) public approvers;
     uint public approversCount;
 
@@ -36,9 +37,10 @@ contract Crowdfunding {
         _;
     }
 
-    constructor (uint minimum, address creator) {
+    constructor (uint minimum, address creator, string memory crowdfundingName) {
         manager = creator;
         minimumContribution = minimum;
+        name = crowdfundingName;
     }
 
     function contribute() public payable {
@@ -78,14 +80,15 @@ contract Crowdfunding {
     }
     
     function getSummary() public view returns (
-      uint, uint, uint, uint, address
+      uint, uint, uint, uint, address, string memory
       ) {
         return (
           minimumContribution,
           address(this).balance,
           requests.length,
           approversCount,
-          manager
+          manager,
+          name
         );
     }
     

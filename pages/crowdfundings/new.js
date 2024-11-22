@@ -8,6 +8,7 @@ import { Router } from "../../routes";
 class CrowdfundingNew extends Component {
   state = {
     minimumContribution: "",
+    name: "",
     errorMessage: "",
     loading: false,
   };
@@ -19,7 +20,7 @@ class CrowdfundingNew extends Component {
     try {
       const accounts = await web3.eth.getAccounts();
       await factory.methods
-        .createCrowdfunding(this.state.minimumContribution)
+        .createCrowdfunding(this.state.minimumContribution, this.state.name)
         .send({
           from: accounts[0],
           gas: "2000000",
@@ -37,6 +38,13 @@ class CrowdfundingNew extends Component {
       <Layout>
         <h3>Create Crowdfunding</h3>
         <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
+          <Form.Field>
+            <label>Name</label>
+            <Input
+              value={this.state.name}
+              onChange={(event) => this.setState({ name: event.target.value })}
+            />
+          </Form.Field>
           <Form.Field>
             <label>Minimum Contribution</label>
             <Input

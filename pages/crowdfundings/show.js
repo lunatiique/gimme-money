@@ -11,7 +11,6 @@ class CrowdfundingShow extends Component {
     const crowdfunding = Crowdfunding(props.query.address);
 
     const summary = await crowdfunding.methods.getSummary().call();
-
     return {
       address: props.query.address,
       minimumContribution: summary[0],
@@ -19,6 +18,7 @@ class CrowdfundingShow extends Component {
       requestsCount: summary[2],
       approversCount: summary[3],
       manager: summary[4],
+      name: summary[5],
     };
   }
 
@@ -29,6 +29,7 @@ class CrowdfundingShow extends Component {
       minimumContribution,
       requestsCount,
       approversCount,
+      name : crowdfundingName,
     } = this.props;
 
     const numApprover = parseInt(approversCount);
@@ -36,6 +37,12 @@ class CrowdfundingShow extends Component {
     const numRequestsCount = parseInt(requestsCount);
 
     const items = [
+      {
+        header: crowdfundingName,
+        meta: "Crowdfunding Name",
+        description: "Name of this crowdfunding",
+        style: { overflowWrap: "break-word" },
+      },
       {
         header: manager,
         meta: "Address of Manager",
@@ -75,7 +82,7 @@ class CrowdfundingShow extends Component {
   render() {
     return (
       <Layout>
-        <h3>Crowdfunding Show</h3>
+        <h3>Information about this crowdfunding</h3>
         <Grid>
           <Grid.Row>
             <Grid.Column width={10}>{this.renderCards()}</Grid.Column>
