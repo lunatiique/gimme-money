@@ -22,9 +22,11 @@ npm install --legacy-peer-deps
 3. Start the project
 ```bash
 npm start
+cd data
+node data_server.js
 ```
 4. Open your browser and go to http://localhost:3000
-5. You can now create a crowdfunding and contribute to existing ones.
+5. You can now create a crowdfunding, contribute to existing ones or verify your association.
 6. To test the project, you can use the Metamask extension on your browser. You can find more information about Metamask [here](https://metamask.io/).
 7. Warning : if after starting the project, it runs in an infinite loop and does't start the website : delete the `.next` folder (cache issues).
 
@@ -39,7 +41,8 @@ node compile.js
 ```
 3. Deploy the smart contract
 ```bash
-node deploy.js
+node deploy_crowdfunding.js
+node deploy_verifier.js
 ```
-4. Copy the address of the deployed contract and paste it in the `ethereum/factory.js` file
-5. You can now start the project
+1. Copy the address of each deployed contract and paste it in the corresponding factory file (`ethereum/factory_crowdfunding.js` or `ethereum/factory_verifier.js`).
+2. You can now start the project.
