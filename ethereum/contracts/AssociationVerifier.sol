@@ -8,6 +8,7 @@ contract AssociationVerifier {
         string titre;
         string adr1;
         string adrs_codepostal;
+        address owner;
     }
 
     // Mapping from identifier (id) to Association details
@@ -31,7 +32,8 @@ contract AssociationVerifier {
             id: _id,
             titre: _titre,
             adr1: _adr1,
-            adrs_codepostal: _adrs_codepostal
+            adrs_codepostal: _adrs_codepostal,
+            owner: msg.sender
         });
 
         // Add the ID to the list of association IDs

@@ -21,6 +21,7 @@ class ListAssociation extends Component {
                     <div>
                         <p>Address: {association.adr1}</p>
                         <p>Postal Code: {association.adrs_codepostal}</p>
+                        <p> Owner: {association.owner}</p>
                     </div>
                 ),
                 fluid: true,

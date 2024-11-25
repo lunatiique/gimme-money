@@ -51,14 +51,6 @@ class NewVerification extends Component {
                             required
                         />
                     </Form.Field>
-                    <Form.Field>
-                        <label>Association Name</label>
-                        <Input
-                            placeholder="Enter the name of your association"
-                            onChange={(event) => this.setState({ name: event.target.value })}
-                            required
-                        />
-                    </Form.Field>
                     <Button primary fluid loading={this.state.loading}>
                         Verify
                     </Button>

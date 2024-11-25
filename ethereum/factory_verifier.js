@@ -3,7 +3,7 @@ import AssociationVerifier from "./build/AssociationVerifier.json";
 
 const instance = new web3.eth.Contract(
   AssociationVerifier.abi,
-  "0x9312b59fcF8DDF81e7d8a97be5FF2D03ebb05187"
+  "0x68c2A52728aa99D44848eF3e4e379B8AF17E5d5e"
 );
 
 export default instance;
