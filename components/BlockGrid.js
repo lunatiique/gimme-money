@@ -5,7 +5,7 @@ import styles from './css/BlockGrid.module.css'; // CSS module for styling
 const blocks = [
   { icon: <img src="/img/sepolia_icon.png" alt="sepolia" />, text: 'Sepolia', bottomText: 'It is deployed on Sepolia testnet for test purposes.'},
   { icon: <img src="img/crowdfunding_icon.png" alt="crowdfunding" />, text: 'Crowdfunding', bottomText: 'Launch your crowdfunding on the blockchain.' },
-  { icon: <img src="img/safety_icon.png" alt="safety" />, text: 'Safety', bottomText: 'Be ensured of the safety and the transparency.' },
+  { icon: <img src="img/safety_icon.png" alt="safety" />, text: 'Verification', bottomText: 'Verify your association for more legitimacy.' },
 ];
 
 const BlockGrid = () => {

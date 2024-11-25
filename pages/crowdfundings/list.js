@@ -26,13 +26,10 @@ class CrowdfundingIndex extends Component {
         };
       })
     );
-  
-    console.log(information_about_crowdfundings); // Fully resolved data should now appear here
-    return { information_about_crowdfundings };
+      return { information_about_crowdfundings };
   }
 
   renderCrowdfundings() {
-    console.log(this.props.information_about_crowdfundings);
   
     const items = this.props.information_about_crowdfundings.map((info) => {
       return {
