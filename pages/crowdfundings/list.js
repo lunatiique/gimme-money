@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Card, Button } from "semantic-ui-react";
-import factory from "../../ethereum/factory";
+import factory from "../../ethereum/factory_crowdfunding";
 import Crowdfunding from "../../ethereum/crowdfunding";
 import Layout from "../../components/Layout";
 import { Link } from "../../routes";
