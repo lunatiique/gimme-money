@@ -1,16 +1,21 @@
 # GIMME MONEY
+
 Project carried out by Lucie ABI CHAAYA, Kevin GUYADER, Pauline MELIN and Luna SCHENK for GS16 cours at the University of Technologie of Troyes.
+
 ## Description
+
 Gimme Money is a crowdfunding platform that allows users to create crowdfundings to raise money for their projects. The platform is built on the Ethereum blockchain and uses smart contracts to manage the crowdfundings. It was created with the purpose of learning about blockchain technology and showing the advantages of using it in a crowdfunding platform.
-            
+
 Realized as a school project, this github repository is a proof of concept. It is not intended to be used in a production environment.
 
 ## Launch the project
 
 ### Prerequisites
+
 - Node.js
 
 ### Installation
+
 1. Clone the repository
 ```bash
 git clone https://github.com/lunatiique/gimme-money
@@ -31,6 +36,7 @@ node data_server.js
 7. Warning : if after starting the project, it runs in an infinite loop and does't start the website : delete the `.next` folder (cache issues).
 
 ## How to deploy the smart contract
+
 1. Go to the `ethereum` directory
 ```bash
 cd ethereum

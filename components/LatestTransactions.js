@@ -58,17 +58,20 @@ const LatestTransactions = () => {
           }}
         >
           <List divided relaxed>
-            {transactions.map((tx) => (
-              <List.Item key={tx.hash} style={{ padding: "1em 0" }}>
-                <List.Content>
-                  <List.Header as="a">Transaction Hash: {tx.hash}</List.Header>
-                  <List.Description>
-                    <strong>From:</strong> {tx.from} <br />
-                    <strong>To:</strong> {tx.to}
-                  </List.Description>
-                </List.Content>
-              </List.Item>
-            ))}
+            {transactions.map((tx) => {
+              const recipient = tx.to === "0xFbA85b4701b5dDFFD2f9C6F05436b1eF5d69aa26" ? "gimme money" : tx.to;
+              return (
+                <List.Item key={tx.hash} style={{ padding: "1em 0" }}>
+                  <List.Content>
+                    <List.Header as="a">Transaction Hash: {tx.hash}</List.Header>
+                    <List.Description>
+                      <strong>From:</strong> {tx.from} <br />
+                      <strong>To:</strong> {recipient}
+                    </List.Description>
+                  </List.Content>
+                </List.Item>
+              );
+            })}
           </List>
         </div>
       )}
